@@ -1,0 +1,738 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap');
+:root {
+    --font-18: 18px;
+    --font-20: 20px;
+    --font-24: 24px;
+    --font-28: 28px;
+    --font-38: 38px;
+    --font-40: 40px;
+    --font-48: 48px;
+    --font-64: 64px;
+
+    --circunferencia-dentro: 290px;
+    --circunferencia-meio: 332px;
+    --circunferencia-fora: 500px;
+
+    --altura-introducao: 671px;
+    --altura-sobrenos: 664px;
+    --altura-exames: 655px;
+    --altura-endereco: 350px;
+    --altura-forms: 350px;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+.circunferenciaDentro {
+    position: absolute;
+    box-sizing: border-box;
+    width: var(--circunferencia-dentro);
+    height: var(--circunferencia-dentro);
+    border-radius: var(--circunferencia-dentro);
+    background-color: #BCF1F8;
+    top: calc((100% - var(--circunferencia-dentro))/2);
+    left: calc((100% - var(--circunferencia-dentro))/2);
+    z-index: 1;
+}
+.circunferenciaMeio {
+    position: absolute;
+    box-sizing: border-box;
+    width: var(--circunferencia-meio);
+    height: var(--circunferencia-meio);
+    border-radius: var(--circunferencia-meio);
+    border: 1px solid #2E4A7D;
+    top: calc((100% - var(--circunferencia-meio))/2);
+    left: calc((100% - var(--circunferencia-meio))/2);
+    z-index: 1;
+}
+
+.circuferenciaFora {
+    box-sizing: border-box;
+    width: var(--circunferencia-fora);
+    height: var(--circunferencia-fora);
+    border-radius: var(--circunferencia-fora);
+    border: 1px solid #2e4a7d80;
+    position: absolute;
+    z-index: 1;
+}
+header {
+    display: flex;
+    background-color: #15C3D6;
+}
+nav {
+    display: block;
+    width: 100%;
+    margin: auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    grid-area: cabecalho;
+    background-color: #15C3D6;
+}
+.quadradoLogo {
+    margin-left: 4%;
+    position: relative;
+    background-color: #2E4A7D;
+    height: 90px;
+    width: 90px;
+    border-radius: 12%;
+}
+.quadradoLogo img {
+    width: 100%;
+    position: absolute;
+}
+.navegacao {
+    width: 60%;
+    margin-right: 2%;
+    font-style: normal;
+    font-weight: 700;
+    font-size: var(--font-28);
+    text-align: end;
+}
+.navegacao a {
+    display: inline;
+    margin: 0 1.5%; /* % em cima de parent(navegação) */
+    padding: 1.2%;
+    text-decoration: none;
+    color: white;
+}
+.navegacao a:hover {
+    background-color: #2E4A7D;
+    border-radius: 7%;
+}
+main {
+    overflow: hidden;
+    position: relative;
+    grid-area: conteudo;
+    background-color: #2e4a7d18;
+}
+.introducao {
+    position: relative;
+    height: var(--altura-introducao);
+    background-color: #15C3D6;
+    border-radius: 0px 0px 0px calc(var(--altura-introducao) * 0.2235);
+    /* border-radius começa em 150px e vai diminuindo coforme a tela */
+}
+.introducao .paragrafo-introdutorio {
+    display: flex;
+    width: 30.5%;
+    height: 80%;
+    position: absolute;
+    bottom: 10%;
+    left: 8%;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.introducao .titulo {
+    font-weight: 800;
+    font-size: var(--font-64);
+    color: #FFD666;
+}
+.introducao .texto {
+    width: 84.09%;
+    font-size: var(--font-24);
+    font-weight: 700;
+    color: white;
+    text-align: justify;
+}
+.introducao > img {
+    z-index: 2;
+    position: absolute;
+    width: 61.28%;
+    right: 0px;
+    bottom: -4.02%;
+}
+.introducao .botaoLaudos {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #2E4A7D;
+    font-family: 'Nunito', 'sans-serif';
+    color: white;
+    border: none;
+    font-weight: 700;
+    font-size: var(--font-28);
+    width: 82%;
+    padding: 3.41% 5.69%;
+    border-radius: calc(var(--altura-introducao) * 0.0298);
+}
+.introducao .botaoLaudos img {
+    width: 15%;
+}
+.introducao .botaoLaudos:active {
+    box-shadow: -1px -1px 2px black;
+}
+.introducao .botaoLaudos:hover {
+    background-color: #2e4a7ddf;
+}
+.introducao .circuferenciaFora {
+    right: -12.84%; 
+    bottom: 52.23%;
+}
+.sobreNos {
+    position: relative;
+    height: var(--altura-sobrenos);
+    background-color: #EBF2F5;
+    overflow: hidden;
+}
+.sobreNos .circuferenciaFora {
+    bottom: 50%;
+    left: 30.06%;
+}
+.sobreNos .flex {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+}
+.sobreNos .flex img {
+    width: 41.66%;
+    z-index: 2;
+}
+.sobreNos .paragrafo {
+    color: #2E4A7D;
+    width: 35.20%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+.sobreNos .titulo {
+    font-weight: 800;
+    font-size: var(--font-48);
+    margin-bottom: 3.945%;
+}
+.sobreNos .texto {
+    opacity: 0.8;
+    text-align: justify;
+    font-style: normal;
+    font-weight: 800;
+    font-size: var(--font-20);
+}
+.exames {
+    position: relative;
+    background-color: #FFD666;
+    height: var(--altura-exames);
+    border-radius: 0px calc(var(--altura-exames) * 0.3358);
+    font-weight: 800;
+    font-size: var(--font-20);
+    color: #3C5D95;
+}
+.exames .titulo {
+    position: absolute;
+    left: 3.95%;
+    top: 4.58%;
+    font-weight: 800;
+    font-size: var(--font-38);
+    color: #2E4A7D;
+}
+.exames .img-titulo1 img{
+    margin-bottom: 5%;
+    width: 64.1%;
+}
+.exames .img-titulo2 img{
+    margin-bottom: 5%;
+    width: 52.08%;
+}
+.exames .img-titulo1 {
+    position: absolute;
+    display: flex;
+    width: 16.25%;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.c1l1 {
+    top: 19.69%;
+    left: 9.3%;
+}
+.c1l2 {
+    top: 15.87%;
+    left: 41.875%;
+}
+.c1l3 {
+    top: 19.69%;
+    right: 9.3%;
+}
+.exames .img-titulo2 {
+    position: absolute;
+    display: flex;
+    width: 20%;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.c2l1 {
+    bottom: 8.39%;
+    left: 23.33%;
+}
+.c2l2 {
+    bottom: 8.39%;
+    right: 24.44%;
+}
+.endereco {
+    overflow: hidden;
+    position: relative;
+    height: var(--altura-endereco);
+    background-color: #EBF2F5;
+}
+.endereco > img {
+    position: absolute;
+    width: 43.75%;
+    top: 11.71%;
+    right: 4.72%;
+}
+.endereco .circuferenciaFora {
+    left: -15.97%;
+    top: -59.71%;
+}
+.endereco .paragrafo {
+    top: 5.42%;
+    left: 7.08%;
+    position: absolute;
+    width: 35.34%;
+    height: 71.42%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    z-index: 2;
+}
+.endereco .titulo {
+    font-weight: 800;
+    font-size: var(--font-48);
+    color: #2E4A7D;
+    margin-bottom: 3.93%;
+}
+.endereco .linha {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    font-weight: 800;
+    font-size: var(--font-18);
+    color: #2E4A7D;
+}
+.endereco .linha img {
+    margin-right: 3.4%;
+    width: 7.95%;
+}
+.forms-duvidas {
+    height: var(--altura-forms);
+    position: relative;
+    background-color: #EBF2F5;
+}
+.forms-duvidas form {
+    box-sizing: border-box;
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+}
+.forms-duvidas input, .forms-duvidas textarea {
+    box-sizing: border-box;
+    margin: 1.388%;
+    padding: 1.666%;
+    font-family: 'Nunito', 'sans-serif';
+    width: calc(50% - 1.388% - 1.666%);
+    border-radius: calc(var(--altura-forms) * 0.02285);
+    font-weight: 800;
+    font-size: var(--font-20);
+    background-color: white;
+    border: none;
+}
+.forms-duvidas textarea {
+    text-align: top;
+    resize: none;
+    width: calc(100% - 1.388% - 1.666%);
+    height: calc(55% );
+}
+.forms-duvidas input[type='submit']{
+    width: calc(100% - 1.388% - 1.666%);
+    background-color: #2E4A7D;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    color: white;
+    font-weight: 800;
+    font-size: var(--font-20);
+}
+.forms-duvidas .contatos {
+    box-sizing: border-box;
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+}
+.forms-duvidas .titulo {
+    box-sizing: border-box;
+    width: 100%;
+    text-align: center;
+    font-weight: 800;
+    font-size: var(--font-48);
+    color: #2E4A7D;
+}
+.forms-duvidas .linha {
+    display: flex;
+    box-sizing: border-box;
+    width: 75%;
+    font-weight: 800;
+    font-size: var(--font-24);
+    color: #2E4A7D;
+}
+.forms-duvidas .linha img {
+    margin-right: 3.2%;
+    width: 6.75%;
+}
+footer {
+    position: relative;
+    background-color: #12AFCB;
+    grid-area: rodape;
+    border-radius: 0px 80px 0px 0px;
+}
+footer img {
+    position: relative;
+    width: 11.11%;
+    top: 12.08%;
+    left: 3.4%;
+}
+footer p {
+    position: absolute;
+    left: 14.93%;
+    top: 37.36%;
+    font-weight: 800;
+    font-size: var(--font-40);
+    color: white;
+}
+body {
+    background-color: #15c3d663;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 113px 1fr 182px;
+    grid-template-areas: 'cabecalho' 'conteudo' 'rodape';
+    font-family: 'Nunito', 'sans-serif';
+}
+
+/* Responsive design until 265px width */
+@media (min-width: 1440px) {
+    main ,footer {
+        width: 1440px;
+        margin: 0 auto;
+    }
+    nav {
+        width: 1440px;
+    }
+}
+@media (max-width: 1300px) {
+    /* 0,90 */
+    :root {
+        --font-18: 16px;
+        --font-20: 18px;
+        --font-24: 21px;
+        --font-28: 25px;
+        --font-38: 34px;
+        --font-40: 36px;
+        --font-48: 43px;
+        --font-64: 57px;
+
+        --circunferencia-dentro: 261px;
+        --circunferencia-meio: 299px;
+        --circunferencia-fora: 450px;
+
+        --altura-introducao: 605px;
+        --altura-sobrenos: 597px;
+        --altura-exames: 589px;
+        --altura-endereco: 315px;
+        --altura-forms: 315px;
+    }
+    .quadradoLogo {
+        width: 81px;
+        height: 81px;
+    }
+    body {
+        grid-template-rows: 102px 1fr 163px;
+    }
+}
+@media (max-width: 1200px) {
+    /* 0,83 */
+    :root {
+        --font-18: 15px;
+        --font-20: 17px;
+        --font-24: 20px;
+        --font-28: 23px;
+        --font-38: 31px;
+        --font-40: 33px;
+        --font-48: 40px;
+        --font-64: 53px;
+    
+        --circunferencia-dentro: 240px;
+        --circunferencia-meio: 275px;
+        --circunferencia-fora: 415px;
+
+        --altura-introducao: 557px;
+        --altura-sobrenos: 551px;
+        --altura-exames: 543px;
+        --altura-endereco: 290px;
+        --altura-forms: 290px;
+    }
+    .quadradoLogo {
+        width: 75px;
+        height: 75px;
+    }
+    body {
+        grid-template-rows: 94px 1fr 151px;
+    }
+}
+@media (max-width: 1050px) {
+    /* 0,72 */
+    :root {
+        --font-18: 12px;
+        --font-20: 14px;
+        --font-24: 16px;
+        --font-28: 19px;
+        --font-38: 26px;
+        --font-40: 27px;
+        --font-48: 33px;
+        --font-64: 44px;
+
+        --circunferencia-dentro: 208px;
+        --circunferencia-meio: 239px;
+        --circunferencia-fora: 360px;
+
+        --altura-introducao: 483px;
+        --altura-sobrenos: 478px;
+        --altura-exames: 471px;
+        --altura-endereco: 252px;
+        --altura-forms: 252px;
+    }
+    .quadradoLogo {
+        width: 64px;
+        height: 64px;
+    }
+    body {
+        grid-template-rows: 81px 1fr 131px;
+    }
+}
+@media (max-width: 900px) {
+    /* 0,625 */
+    :root {
+        --font-18: 11px;
+        --font-20: 13px;
+        --font-24: 15px;
+        --font-28: 17px;
+        --font-38: 23px;
+        --font-40: 25px;
+        --font-48: 30px;
+        --font-64: 40px;
+    
+        --circunferencia-dentro: 181px;
+        --circunferencia-meio: 207px;
+        --circunferencia-fora: 312px;
+
+        --altura-introducao: 419px;
+        --altura-sobrenos: 415px;
+        --altura-exames: 409px;
+        --altura-endereco: 218px;
+        --altura-forms: 218px;
+    }
+    .quadradoLogo {
+        width: 57px;
+        height: 57px;
+    }
+    body {
+        grid-template-rows: 70px 1fr 113px;
+    }
+}
+@media (max-width: 800px) {
+    /* 0,555 */
+    :root {
+        --font-18: 10px;
+        --font-20: 11px;
+        --font-24: 13px;
+        --font-28: 15px;
+        --font-38: 21px;
+        --font-40: 22px;
+        --font-48: 26px;
+        --font-64: 35px;
+
+        --circunferencia-dentro: 160px;
+        --circunferencia-meio: 184px;
+        --circunferencia-fora: 277px;
+
+        --altura-introducao: 372px;
+        --altura-sobrenos: 368px;
+        --altura-exames: 360px;
+        --altura-endereco: 192px;
+        --altura-forms: 192px;
+    }
+    .quadradoLogo {
+        width: 50px;
+        height: 50px;
+    }
+    body {
+        grid-template-rows: 62px 1fr 100px;
+    }
+}
+@media (max-width: 700px) {
+    /* 0,486 */
+    :root {
+        --font-18: 9px;
+        --font-20: 10px;
+        --font-24: 11px;
+        --font-28: 13px;
+        --font-38: 18px;
+        --font-40: 20px;
+        --font-48: 23px;
+        --font-64: 30.5px;
+
+        --circunferencia-dentro: 140px;
+        --circunferencia-meio: 161px;
+        --circunferencia-fora: 243px;
+
+        --altura-introducao: 326px;
+        --altura-sobrenos: 322px;
+        --altura-exames: 318px;
+        --altura-endereco: 170px;
+        --altura-forms: 170px;
+    }
+    body {
+        grid-template-rows: 55px 1fr 88px;
+    }
+}
+@media (max-width: 600px) {
+    /* 0,416 */
+    :root {
+        --font-18: 7px;
+        --font-20: 8px;
+        --font-24: 9.5px;
+        --font-28: 12px;
+        --font-38: 15px;
+        --font-40: 16px;
+        --font-48: 20px;
+        --font-64: 25.2px;
+    
+        --circunferencia-dentro: 120px;
+        --circunferencia-meio: 138px;
+        --circunferencia-fora: 208px;
+
+        --altura-introducao: 279px;
+        --altura-sobrenos: 276px;
+        --altura-exames: 272px;
+        --altura-endereco: 145px;
+        --altura-forms: 145px;
+    }
+    .quadradoLogo {
+        width: 38px;
+        height: 38px;
+    }
+    body {
+        grid-template-rows: 47px 1fr 75px;
+    }
+}
+@media (max-width: 500px) {
+    /* 0,347 */
+    :root {
+        --font-18: 6px;
+        --font-20: 7px;
+        --font-24: 7.5px;
+        --font-28: 9.5px;
+        --font-38: 13px;
+        --font-40: 14px;
+        --font-48: 16px;
+        --font-64: 19.5px;
+
+        --circunferencia-dentro: 100px;
+        --circunferencia-meio: 115px;
+        --circunferencia-fora: 173px;
+
+        --altura-introducao: 232px;
+        --altura-sobrenos: 230px;
+        --altura-exames: 227px;
+        --altura-endereco: 121px;
+        --altura-forms: 121px;
+    }
+    .quadradoLogo {
+        width: 31px;
+        height: 31px;
+    }
+    body {
+        grid-template-rows: 39px 1fr 63px;
+    }
+}
+@media (max-width: 400px) {
+    /* 0,277 */
+    :root {
+        --font-18: 4.5px;
+        --font-20: 5.5px;
+        --font-24: 6px;
+        --font-28: 7.2px;
+        --font-38: 10px;
+        --font-40: 11px;
+        --font-48: 13px;
+        --font-64: 14.5px;
+    
+        --circunferencia-dentro: 80px;
+        --circunferencia-meio: 91px;
+        --circunferencia-fora: 138px;
+
+        --altura-introducao: 175px;
+        --altura-sobrenos: 183px;
+        --altura-exames: 181px;
+        --altura-endereco: 96px;
+        --altura-forms: 96px;
+    }
+    .quadradoLogo {
+        width: 25px;
+        height: 25px;
+    }
+    body {
+        grid-template-rows: 31px 1fr 50px;
+    }
+}
+@media (max-width: 300px) {
+    /* 0,208 */
+    :root {
+        --font-18: 3.74px;
+        --font-20: 4.16px;
+        --font-24: 5px;
+        --font-28: 5px;
+        --font-38: 7.9px;
+        --font-40: 8.32px;
+        --font-48: 10px;
+        --font-64: 10.1px;
+
+        --circunferencia-dentro: 60px;
+        --circunferencia-meio: 69px;
+        --circunferencia-fora: 104px;
+
+        --altura-introducao: 139px;
+        --altura-sobrenos: 138px;
+        --altura-exames: 136px;
+        --altura-endereco: 72px;
+        --altura-forms: 72px;
+    }
+    .quadradoLogo {
+        width: 18px;
+        height: 18px;
+    }
+    .circunferenciaMeio {
+        border: 0.5px solid #2e4a7dac;
+    }
+    .circuferenciaFora {
+        border: 0.5px solid #2e4a7d80;
+    }
+    body {
+        grid-template-rows: 23px 1fr 38px;
+    }
+    
+}
