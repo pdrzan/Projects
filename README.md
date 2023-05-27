@@ -1,5 +1,5 @@
-# Projetos
+# Projects
 
-Este é o repositório dos meus projetos pessoais.
+This is a repository of my personal projects.
 
-Todo código aqui ou foi feito por mim ou está especificado sua origem no readme do respectivo projeto.
+The origin of the code is specified in the respectives readmes of the files, most of which were made by me.

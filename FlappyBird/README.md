@@ -1,5 +1,7 @@
-Esse é um projeto que tenta imitar o jogo FlappyBird.
+# Flappy Bird
 
-Ele foi feito para uma página Html e todas as interções foram baseadas em javascript.
+This project tries to imitate the Flappy Bird game. It was made for an html page, and all the interactions were made using javascript.
 
-A ideia do projeto foi tirada do curso de Web Moderno da plataforma Cod3r, assim como as fontes, a imagem do Flappy e o arquivo estilo.css
+The idea for the project was taken from the Web Moderno course on the Cod3r platform. The fonts, the Flappy image, and the estilo.css file were taken from there.
+
+If you want to play, just open the flappy.html file in your browser.
