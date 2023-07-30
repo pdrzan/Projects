@@ -1,16 +1,9 @@
 # Mips Emulator
 
-O emulador funciona da seguinte maneira:
-1. Os arquivos de data e texto são lidos. Se caso o programa não conseguir fazer isso uma mensagem de erro é exibida e a execução é encerrada;
-2. Os dados dos arquivos são passados para sua respectiva partição de uma memória enderaçada por bytes;
-3. A partir de um pc iniciado em 0, as intruções são executadas de acordo com seu formato (R, I ou J) por funções correspondentes;
-4. Ao fim da execução de todas as instruções, todos as impressões feitas pelo programa, o conteúdo de seus registradores e de sua memória são impressos no terminal;
-
-Observações: 
-1. Existe uma verificação de endereços válidos;
-2. Existe uma verificação de stack overflow;
-
-Funcionalidades Implementadas:
+Implemented features:
+-Verifications:
+1. Valid addresses
+2. Stack overflow
 - Syscalls: 
 1. print integer
 4. print string
@@ -60,18 +53,12 @@ Funcionalidades Implementadas:
 16. sh - store halfword
 17. sw - store word
 
-O trabalho é composto de 2 arquivos:
-- trab.c
-- trab.h
-
-Para compilar o emulador:
+To compile:
 
 `gcc -o emulador trab.c`
 
-Para rodar a demo ou outro programa:
+To run the demo or other program:
 
-1. Salve o binário nos respectivos: program_text.bin e program_data.bin
+1. Save the binaries in: program_text.bin e program_data.bin
 2. ./emulador program_text.bin program_data.bin > program_out.txt
-3. Para ver o resultado acesse program_out.txt
-
-OBS: Os binários da demo já estão em program_text.bin e program_data.bin.
+3. To see the result open program_out.txt
